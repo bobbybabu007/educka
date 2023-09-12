@@ -11,6 +11,8 @@ spec:
   containers:
   - name: 1st
     image: nginx
+    ports:
+     - containerPort: 80
     volumeMounts:
     - name: html
       mountPath: /usr/share/nginx/html

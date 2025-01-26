@@ -15,12 +15,12 @@ spec:
         app: pvc-app
     spec:
       containers:
-     - name: myvolumes-container
-       image: tomcat:8.5
-       volumeMounts:
-        - name: pv
-          mountPath: "/usr/local/tomcat/logs"
-    volumes:
-     - name: pv
-       persistentVolumeClaim:
-         claimName: my-pvc      
+       - name: myvolumes-container
+         image: tomcat:8.5
+         volumeMounts:
+          - name: pv
+            mountPath: "/usr/local/tomcat/logs"
+      volumes:
+       - name: pv
+         persistentVolumeClaim:
+           claimName: my-pvc      

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-prod-homepage
+  namespace: prod  
+data:
+  index.html: |
+      <H1> Hello PROD ConfigMap </H1>
